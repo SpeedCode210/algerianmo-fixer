@@ -15,16 +15,16 @@ links = document.evaluate("//a[@href]",document,null,XPathResult.UNORDERED_NODE_
 for (var i=0;i<links.snapshotLength;i++) {
   var thisLink = links.snapshotItem(i);
   if(thisLink.textContent.includes("إنجازاتي"))
-    thisLink.href = thisLink.href.replace(RegExp("(?<=http:\/\/www\.algerianmo\.com\/accounts\/)([0-9]+)"),right_num);
+    thisLink.href = thisLink.href.replace(RegExp("(?<=algerianmo\.com\/accounts\/)([0-9]+)"),right_num);
 }
-if(window.location.href.includes("http://www.algerianmo.com/accounts/")){
+if(window.location.href.includes("algerianmo.com/accounts/")){
 var zNode = document.createElement ('div');
 zNode.innerHTML = '<button id="myButton" type="button">' + 'Set as my profile</button>';
 zNode.setAttribute ('id', 'myContainer');
 document.body.appendChild (zNode);
 document.getElementById ("myButton").addEventListener ("click", ButtonClickAction, false);
 function ButtonClickAction (zEvent) {
-    localStorage.setItem('user_id', window.location.href.match(/(?<=http:\/\/www\.algerianmo\.com\/accounts\/)([0-9]+)/g)[0]);
+    localStorage.setItem('user_id', window.location.href.match(/(?<=algerianmo\.com\/accounts\/)([0-9]+)/g)[0]);
     document.location.reload()
 }
 GM_addStyle ( `
