@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name        algerianmo.com profile link fixer
 // @namespace   Violentmonkey Scripts
-// @match       http://www.algerianmo.com/*
+// @include     http://www.algerianmo.com/*
+// @include     http://algerianmo.com/*
 // @version     1.0
 // @author      Raouf Ould Ali / SpeedCode#0050
 // @description 1/25/2023, 5:34:04 PM
