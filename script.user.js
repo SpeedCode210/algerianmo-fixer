@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @include     http://www.algerianmo.com/*
 // @include     http://algerianmo.com/*
-// @version     1.0
+// @version     1.1
 // @author      Raouf Ould Ali / SpeedCode#0050
 // @description 1/25/2023, 5:34:04 PM
 // ==/UserScript==
@@ -17,36 +17,12 @@ for (var i=0;i<links.snapshotLength;i++) {
   if(thisLink.textContent.includes("إنجازاتي"))
     thisLink.href = thisLink.href.replace(RegExp("(?<=algerianmo\.com\/accounts\/)([0-9]+)"),right_num);
 }
-if(window.location.href.includes("algerianmo.com/accounts/")){
-var zNode = document.createElement ('div');
-zNode.innerHTML = '<button id="myButton" type="button">' + 'Set as my profile</button>';
-zNode.setAttribute ('id', 'myContainer');
-document.body.appendChild (zNode);
-document.getElementById ("myButton").addEventListener ("click", ButtonClickAction, false);
+if(window.location.href.match(/algerianmo.com\/accounts\/[0-9]/g).length >= 1){
+var zNode = document.getElementsByTagName('tbody')[0];
+zNode.innerHTML += '<tr><button id="set_profile" class="btn btn-secondary mt-2 mb-2 w-100" type="button">' + 'Set as my profile</button></tr>';
+document.getElementById("set_profile").addEventListener ("click", ButtonClickAction, false);
 function ButtonClickAction (zEvent) {
     localStorage.setItem('user_id', window.location.href.match(/(?<=algerianmo\.com\/accounts\/)([0-9]+)/g)[0]);
     document.location.reload()
 }
-GM_addStyle ( `
-    #myContainer {
-        position:               absolute;
-        top:                    0;
-        left:                   0;
-        font-size:              20px;
-        background:             orange;
-        border:                 3px outset black;
-        margin:                 5px;
-        opacity:                0.9;
-        z-index:                1100;
-        padding:                5px 20px;
-    }
-    #myButton {
-        cursor:                 pointer;
-        background:             red;
-    }
-    #myContainer p {
-        color:                  red;
-        background:             white;
-    }
-` );
 }
