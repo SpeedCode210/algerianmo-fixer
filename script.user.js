@@ -4,7 +4,8 @@
 // @include     http://www.algerianmo.com/*
 // @include     http://algerianmo.com/*
 // @downloadURL https://github.com/SpeedCode210/algerianmo-fixer/raw/main/script.user.js
-// @version     1.1
+// @icon http://www.algerianmo.com/static/images/favicon.ico
+// @version     1.2
 // @author      Raouf Ould Ali / SpeedCode#0050
 // @description 1/25/2023, 5:34:04 PM
 // ==/UserScript==
