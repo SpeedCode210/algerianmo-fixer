@@ -11,6 +11,7 @@ Install ViolentMonkey for [chrome](https://chrome.google.com/webstore/detail/vio
 ### Step 2 :
 Go to  :
 For the "إنجازاتي" button : https://github.com/SpeedCode210/algerianmo-fixer/raw/main/script.user.js
+
 For the temporary RTL problem : https://github.com/SpeedCode210/algerianmo-fixer/raw/main/rtl-fix.user.js
 and click on "Confirm installation"
 
