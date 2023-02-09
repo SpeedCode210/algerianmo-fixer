@@ -1,5 +1,5 @@
 # algerianmo-fixer
-A script to fix some problems on algerianmo.com
+A set of scripts to fix some problems on algerianmo.com
 
 ## How to install :
 
